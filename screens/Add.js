@@ -52,7 +52,7 @@ const Add = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Heading size="xl" style={styles.heading}>
-        Add to watchlist
+        Add to Watch List
       </Heading>
       <FormControl style={styles.formStyle}>
         <Input

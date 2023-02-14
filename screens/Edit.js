@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
-const Edit = () => {
+const Edit = ({season}) => {
   return <Text>Edit</Text>;
 };
 
