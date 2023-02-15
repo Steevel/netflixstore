@@ -96,18 +96,31 @@ const Home = ({navigation}) => {
                   borderRadius: 6,
                 }}
                 p={2}>
+                <Checkbox
+                  size="md"
+                  style={{
+                    backgroundColor: `${
+                      season.isWatched ? '#5067ff' : '#171E2E'
+                    }`,
+                    color: '#5067ff',
+                    borderColor: '#5067ff',
+                  }}
+                  accessibilityLabel="Completed"
+                  isChecked={season.isWatched}
+                  onPress={() => markComplete(season.id)}
+                />
+
+                <View>
+                  <Text fontSize="md" style={styles.seasonName}>
+                    {season.name}
+                  </Text>
+                  <Text fontSize="sm" style={{color: 'gray'}}>
+                    {season.totalNoSeason} seasons to watch
+                  </Text>
+                </View>
+
                 <View>
                   <HStack space={1}>
-                    <Button
-                      colorScheme="danger"
-                      size="lg"
-                      onPress={() => deleteSeasons(season.id)}>
-                      <Icon
-                        color="white"
-                        as={<AntDesign name="delete" />}
-                        size="sm"
-                      />
-                    </Button>
                     <Button style={{backgroundColor: '#5067ff'}} size="lg">
                       <Icon
                         color="white"
@@ -118,22 +131,18 @@ const Home = ({navigation}) => {
                         }}
                       />
                     </Button>
+                    <Button
+                      colorScheme="danger"
+                      size="lg"
+                      onPress={() => deleteSeasons(season.id)}>
+                      <Icon
+                        color="white"
+                        as={<AntDesign name="delete" />}
+                        size="sm"
+                      />
+                    </Button>
                   </HStack>
                 </View>
-
-                <View>
-                  <Text style={styles.seasonName}>{season.name}</Text>
-                  <Text style={{color: 'gray'}}>
-                    {season.totalNoSeason} seasons to watch
-                  </Text>
-                </View>
-
-                <Checkbox
-                  size="md"
-                  colorScheme="blue"
-                  isChecked
-                  onPress={() => markComplete(season.id)}
-                />
               </HStack>
             ))}
           </VStack>

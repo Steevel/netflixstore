@@ -1,18 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {
-  Button,
-  FormControl,
-  Heading,
-  Input,
-  NativeBaseProvider,
-  ScrollView,
-} from 'native-base';
+import {StyleSheet} from 'react-native';
+import {Button, FormControl, Heading, Input, ScrollView} from 'native-base';
 import shortid from 'shortid';
 import AsyncStorage from '@react-native-community/async-storage';
-// import shortid from 'shortid';
-// import AsyncStorage from '@react-native-community/async-storage';
+import Snackbar from 'react-native-snackbar';
 
 const Add = ({navigation}) => {
   const [name, setName] = useState('');
@@ -21,8 +13,11 @@ const Add = ({navigation}) => {
   const addToList = async () => {
     try {
       if (!name || !totalNoSeason) {
-        return alert('Please add both fields');
-        //TODO: ADD SNACKBAR HERE
+        return Snackbar.show({
+          text: 'Please fill both fields',
+          duration: Snackbar.LENGTH_SHORT,
+          backgroundColor: '#D82E2F',
+        });
       }
 
       const seasonToAdd = {
@@ -77,9 +72,9 @@ const Add = ({navigation}) => {
           m={4}
           size="lg"
           borderRadius="full"
-          style={{backgroundColor: '#5067ff'}}
+          style={styles.btnStyle}
           onPress={addToList}>
-          <Text style={{color: '#eee'}}>Add</Text>
+          Add
         </Button>
       </FormControl>
     </ScrollView>
@@ -99,5 +94,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     marginTop: 50,
     marginBottom: 20,
+  },
+  btnStyle: {
+    backgroundColor: '#5067ff',
+    color: '#eee',
   },
 });

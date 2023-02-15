@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {NativeBaseProvider} from 'native-base';
 
 // Navigation
@@ -22,7 +21,7 @@ const App = () => {
             component={Home}
             options={{
               headerStyle: {
-                backgroundColor: '#0f4c75',
+                backgroundColor: '#5067ff',
               },
               title: 'Netflix Store',
               headerTitleStyle: {
@@ -36,7 +35,7 @@ const App = () => {
             component={Add}
             options={{
               headerStyle: {
-                backgroundColor: '#0f4c75',
+                backgroundColor: '#5067ff',
               },
               title: 'Netflix Store',
               headerTitleStyle: {
@@ -50,7 +49,7 @@ const App = () => {
             component={Edit}
             options={{
               headerStyle: {
-                backgroundColor: '#0f4c75',
+                backgroundColor: '#5067ff',
               },
               title: 'Netflix Store',
               headerTitleStyle: {
@@ -64,34 +63,5 @@ const App = () => {
     </NativeBaseProvider>
   );
 };
-const styles = StyleSheet.create({
-  emptyContainer: {
-    backgroundColor: '#1b262c',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  container: {
-    backgroundColor: '#1b262c',
-    flex: 1,
-  },
-  heading: {
-    textAlign: 'center',
-    color: '#00b7c2',
-    marginVertical: 15,
-    marginHorizontal: 5,
-  },
-  actionButton: {
-    marginLeft: 5,
-  },
-  seasonName: {
-    color: '#fdcb9e',
-    textAlign: 'justify',
-  },
-  listItem: {
-    marginLeft: 0,
-    marginBottom: 20,
-  },
-});
 
 export default App;
