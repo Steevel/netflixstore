@@ -2,14 +2,7 @@
 
 This is a simple app to create a watchlist for netflix tv series
 
-<<<<<<< HEAD
-
 ## 👨🏻‍💻 Tech Used
-
-=======
-<img src="./Images/Home%20Screen.jpg" width="300">|<img src="Images/Add%20Screen.jpg" width="300">
-<img src="./Images/Empty Home Screen.jpg" width="300">  <img src="./images/Update Screen.jpg" width="300">
->>>>>>> d793c9db5e49f6065d93cbfd1fc077ba0500ad84
 
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
